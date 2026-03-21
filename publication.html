@@ -2,42 +2,10 @@
 layout: page
 title: Publication
 description: This page contains publications.
+permalink: /publication.html
 ---
 
-<head>
-<style>
-table {
-  # font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 0px solid #dddddd;
-  padding: 1px;
-}
-
-tr:nth-child(even) {
-  # background-color: #dddddd;
-}
-
-li {
-    padding-bottom: 5px;
-}
-
-a {
-	color: $text-color;
-	text-decoration: none;
-	font-weight: 200;
-	&:hover,
-	&:focus {
-		color: darken($text-color, 5%);
-	}
-}
-
-</style>
-</head>
-
+<section class="content-page content-page-publication">
 <h2>Publications</h2>
 
 <p>
@@ -52,41 +20,9 @@ The inspirehep <a href="https://inspirehep.net/authors/1712090">[link]</a> page 
     <li> 
     <b class="paper-title">{{ publication.title }}</b> <a href="https://arxiv.org/abs/{{publication.arXiv}}" > [arXiv: {{publication.arXiv}}] </a> 
      <i class="author-display">{{ publication.authors }}</i>
-     <p class="abs-display"> {{ publication.content | truncatewords: 50 }}</p>
+     <p class="abs-display">{{ publication.content | strip_html | normalize_whitespace | truncatewords: 50 }}</p>
       </li>
    {% endfor %}
    
 </ul>
-
-	
-		  <!-- Pagination links -->
-      {% if paginator.total_pages > 1 %}
-        <div class="pagination">
-          {% if paginator.previous_page == 1 %}
-            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
-          {% elsif paginator.previous_page%}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
-          {% else %}
-            <span class="page-item">&laquo;</span>
-          {% endif %}
-        
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <span class="page-item">{{ page }}</span>
-            {% elsif page == 1 %}
-              <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
-            {% else %}
-              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
-            {% endif %}
-          {% endfor %}
-        
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&raquo;</a>
-          {% else %}
-            <span class="page-item">&raquo;</span>
-          {% endif %}
-        </div>
-        {% endif %}
-
-	  </div>
-
+</section>

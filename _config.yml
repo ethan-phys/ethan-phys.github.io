@@ -1,18 +1,18 @@
 # Site settings
 title: Yu-Cheng Qiu | Ph.D in Physics
 description: "This is a site sharing knowledge of physics. Please contact me if you have any inquiry."
-url: "https://qiuyucheng-hep.github.io"
+url: "https://ethan-phys.github.io"
 author:
   name: "Yu-Cheng Qiu"
-  email: "ethanqiu@sjtu.edu.cn"
-  url: "https://qiuyucheng-hep.github.io"
+  email: "ethan.qiu@cityu.edu.hk"
+  url: "https://ethan-phys.github.io"
 
 # Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: "" # Leave empty for a root-site deployment
 markdown: kramdown
 source: .
 destination: ./_site
-permalink: /:title
+permalink: /:title.html
 paginate: 8
 paginate_path: /page:num/
 
@@ -26,7 +26,7 @@ defaults:
       layout: "post"
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
@@ -42,4 +42,3 @@ collections:
    publications:
       output: true
       
-

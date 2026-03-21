@@ -1,3 +1,225 @@
 /*- Custom style -*/
 
 // -- Put custom style under this point -- //
+
+.content-page table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.2em;
+}
+
+.content-page td,
+.content-page th {
+  border: 0;
+  padding: 1px;
+}
+
+.content-page li {
+  padding-bottom: 5px;
+}
+
+.content-page-publication a {
+  color: $text-color;
+  text-decoration: none;
+  font-weight: 200;
+
+  &:hover,
+  &:focus {
+    color: darken($text-color, 5%);
+  }
+}
+
+.content-page-publication .abs-display {
+  line-height: 1.5em;
+  margin-top: 0.35em;
+}
+
+.content-page-actions {
+  margin-bottom: 1.5rem;
+}
+
+.content-page-actions a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.cv-section + .cv-section {
+  margin-top: 2rem;
+}
+
+.cv-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.cv-item {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background-color: rgba(0, 0, 0, 0.015);
+
+  @media (min-width: 760px) {
+    grid-template-columns: minmax(170px, 220px) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.cv-item-date {
+  margin-bottom: 0;
+  color: $text-light-color;
+  font-size: 0.95rem;
+}
+
+.cv-item-body h4 {
+  padding: 0;
+  margin-bottom: 0.25rem;
+  line-height: 1.35;
+}
+
+.cv-item-body p {
+  margin-bottom: 0;
+}
+
+.content-page-list {
+  padding-left: 1.25rem;
+}
+
+.content-page-list li + li {
+  margin-top: 0.45rem;
+}
+
+.talk-list {
+  list-style: none;
+  counter-reset: talk-counter;
+}
+
+.talk-item {
+  counter-increment: talk-counter;
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem 1rem 3.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.talk-item::before {
+  content: counter(talk-counter, decimal-leading-zero);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: $text-light-color;
+  font-size: 0.95rem;
+}
+
+.talk-title {
+  padding: 0;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.talk-meta {
+  margin-bottom: 0.35rem;
+  color: $text-light-color;
+}
+
+.talk-links {
+  margin-bottom: 0;
+}
+
+.talk-links a + a {
+  margin-left: 0.75rem;
+}
+
+.home-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 0, 0, 0.03), transparent 40%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.015), rgba(0, 0, 0, 0.05));
+
+  @media (min-width: 760px) {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    padding: 2rem;
+  }
+}
+
+.home-hero-photo img {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 0;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.home-hero-kicker {
+  margin-bottom: 0.35rem;
+  color: $text-light-color;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-hero-title {
+  padding-top: 0;
+  line-height: 1.15;
+}
+
+.home-hero-intro {
+  max-width: 38rem;
+}
+
+.home-hero-meta {
+  margin: 1.25rem 0;
+}
+
+.home-hero-meta p {
+  margin-bottom: 0.6rem;
+}
+
+.home-hero-meta strong,
+.home-hero-meta span {
+  display: block;
+}
+
+.home-hero-meta strong {
+  margin-bottom: 0.1rem;
+}
+
+.home-hero-meta span {
+  color: $text-light-color;
+}
+
+.home-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.home-hero-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 999px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.24);
+  }
+}
