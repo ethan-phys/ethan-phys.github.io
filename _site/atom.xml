@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Yu-Cheng Qiu | Ph.D in Physics</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <id>http://localhost:4000</id>
- <updated>2026-03-21T17:05:31+08:00</updated>
+ <link href="https://ethan-phys.github.io/atom.xml" rel="self"/>
+ <id>https://ethan-phys.github.io</id>
+ <updated>2026-03-22T00:49:49+08:00</updated>
  <author>
    <name>Yu-Cheng Qiu</name>
-   <uri>https://qiuyucheng-hep.github.io</uri>
+   <uri>https://ethan-phys.github.io</uri>
    <email>ethan.qiu@cityu.edu.hk</email>
  </author>
 
@@ -15,8 +15,8 @@
 
  <entry>
    <title>Hello world</title>
-   <link href="http://localhost:4000/hello-world"/>
-   <id>http://localhost:4000/hello-world</id>
+   <link href="https://ethan-phys.github.io/hello-world.html"/>
+   <id>https://ethan-phys.github.io/hello-world</id>
    <updated>2024-08-05T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;This is my first post. Welcome to my site!&lt;/p&gt;
 </content>
