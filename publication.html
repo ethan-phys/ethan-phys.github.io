@@ -6,23 +6,39 @@ permalink: /publication.html
 ---
 
 <section class="content-page content-page-publication">
-<h2>Publications</h2>
+<div class="publication-hero">
+  <p class="publication-kicker">Research Archive</p>
+  <h2>Publications</h2>
 
-<p>
-The following publications are listed in chronological order. The latest is on the top. <br> 
-In the theoretical high energy physics community, the author list is usually alphabetical according to surname. <br>
-The inspirehep <a href="https://inspirehep.net/authors/1712090">[link]</a> page contains details.
-</p>
+  <p class="publication-intro">
+    The list below is ordered from newest to oldest. In theoretical high energy physics, author lists are often alphabetical by surname.
+    You can find the full record and citation details on
+    <a href="https://inspirehep.net/authors/1712090">InspireHEP</a>.
+  </p>
+</div>
 
-<ul  style="list-style-type:circle;">
+<div class="publication-summary">
+  <p><strong>{{ site.publications | size }}</strong> listed papers</p>
+</div>
 
-   {% for publication in site.publications reversed%}
-    <li> 
-    <b class="paper-title">{{ publication.title }}</b> <a href="https://arxiv.org/abs/{{publication.arXiv}}" > [arXiv: {{publication.arXiv}}] </a> 
-     <i class="author-display">{{ publication.authors }}</i>
-     <p class="abs-display">{{ publication.content | strip_html | normalize_whitespace | truncatewords: 50 }}</p>
-      </li>
-   {% endfor %}
-   
-</ul>
+<div class="publication-list">
+  {% for publication in site.publications reversed %}
+  <article class="publication-card">
+    <div class="publication-card-meta">
+      <span class="publication-date">{{ publication.date | date: "%b %Y" }}</span>
+      <a class="publication-badge" href="https://arxiv.org/abs/{{ publication.arXiv }}">arXiv: {{ publication.arXiv }}</a>
+    </div>
+
+    <h3 class="publication-title">{{ publication.title }}</h3>
+    <p class="publication-authors">{{ publication.authors }}</p>
+    <p class="publication-abstract">
+      {{ publication.content | strip_html | normalize_whitespace | truncatewords: 55 }}
+    </p>
+
+    <p class="publication-links">
+      <a href="https://arxiv.org/abs/{{ publication.arXiv }}">Read on arXiv</a>
+    </p>
+  </article>
+  {% endfor %}
+</div>
 </section>

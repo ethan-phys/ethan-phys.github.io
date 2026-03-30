@@ -1,6 +1,6 @@
 ---
-title: "High reheating temperature without axion domain walls"
-authors: "Nakagawa, Shota, Nakai, Yuichiro, Qiu, Yu-Cheng, Wang, Lingyun, Wang, Yaoduo"
+title: High reheating temperature without axion domain walls
+authors: Shota Nakagawa, Yuichiro Nakai, Yu-Cheng Qiu, Lingyun Wang, Yaoduo Wang
 arXiv: 2509.24812
 date: 2025-09-29
 ---

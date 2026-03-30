@@ -4,7 +4,7 @@
  <title>Yu-Cheng Qiu | Ph.D in Physics</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2026-03-30T19:55:56+08:00</updated>
+ <updated>2026-03-31T00:16:04+08:00</updated>
  <author>
    <name>Yu-Cheng Qiu</name>
    <uri>https://ethan-phys.github.io</uri>
@@ -14,12 +14,11 @@
  
 
  <entry>
-   <title>Naturalness principle</title>
-   <link href="http://localhost:4000/Naturalness_principle.html"/>
-   <id>http://localhost:4000/Naturalness_principle</id>
+   <title>Anthropic principle</title>
+   <link href="http://localhost:4000/Anthropic_principle.html"/>
+   <id>http://localhost:4000/Anthropic_principle</id>
    <updated>2026-03-30T00:00:00+08:00</updated>
-   <content type="html">
-</content>
+   <content type="html">&lt;p&gt;Is using our own existence as a basis for constructing physical theories merely sophistry, or can it genuinely advance the development of science?&lt;/p&gt; &lt;p&gt;The &lt;strong&gt;anthropic principle&lt;/strong&gt; usually appears together with the &lt;strong&gt;naturalness problem&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;There are many different formulations of the anthropic principle. The version often used for “sophistry” is: the...</content>
  </entry>
 
  
