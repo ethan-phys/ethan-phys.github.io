@@ -137,6 +137,35 @@
   margin-left: 0.75rem;
 }
 
+#nav-links .nav-icon-link,
+#nav-list .nav-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+#nav-links .nav-icon-link img,
+#nav-list .nav-icon-link img {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#nav-links .nav-icon-link[aria-label="CV"] img,
+#nav-list .nav-icon-link[aria-label="CV"] img {
+  width: 18px;
+}
+
+#nav-links .nav-icon-link[aria-label="Blog"] img,
+#nav-list .nav-icon-link[aria-label="Blog"] img,
+#nav-links .nav-icon-link[aria-label="Presentation"] img,
+#nav-list .nav-icon-link[aria-label="Presentation"] img,
+#nav-links .nav-icon-link[aria-label="Publication"] img,
+#nav-list .nav-icon-link[aria-label="Publication"] img {
+  width: 18px;
+}
+
 .home-hero {
   display: grid;
   gap: 2rem;
@@ -157,6 +186,7 @@
 
 .home-hero-photo img {
   width: 100%;
+  height: auto;
   max-width: 280px;
   margin-bottom: 0;
   border-radius: 18px;
