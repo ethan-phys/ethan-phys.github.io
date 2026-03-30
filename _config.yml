@@ -15,6 +15,14 @@ destination: ./_site
 permalink: /:title.html
 paginate: 8
 paginate_path: /page:num/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - WORKFLOW.md
+  - license.md
+  - scripts
+  - _includes/_site
 
 # Default values
 defaults:

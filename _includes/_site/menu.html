@@ -1,11 +1,33 @@
 <nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav"{% endif %}>
 	<div id="nav-list">
-		<a href="{{ site.baseurl }}/">Home</a>
-
+		<a href="{{ "/" | relative_url }}">Home</a>
+		
 		<!-- Nav pages -->
 	  {% for page in site.pages %}
 	    {% if page.layout == "page" %}
-	      <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
+	      {% assign nav_url = page.url %}
+	      {% unless nav_url contains '.html' %}
+	        {% assign nav_url = nav_url | append: '.html' %}
+	      {% endunless %}
+	      {% if page.title == "CV" %}
+	      <a class="nav-icon-link" href="{{ nav_url | relative_url }}" title="{{ page.title }}" aria-label="CV">
+	        <img src="{{ "/img/cv.svg" | relative_url }}" alt="" width="16">
+	      </a>
+	      {% elsif page.title == "Blog" %}
+	      <a class="nav-icon-link" href="{{ nav_url | relative_url }}" title="{{ page.title }}" aria-label="Blog">
+	        <img src="{{ "/img/blog.svg" | relative_url }}" alt="" width="16">
+	      </a>
+	      {% elsif page.title == "Presentation" %}
+	      <a class="nav-icon-link" href="{{ nav_url | relative_url }}" title="{{ page.title }}" aria-label="Presentation">
+	        <img src="{{ "/img/presentation.svg" | relative_url }}" alt="" width="16">
+	      </a>
+	      {% elsif page.title == "Publication" %}
+	      <a class="nav-icon-link" href="{{ nav_url | relative_url }}" title="{{ page.title }}" aria-label="Publication">
+	        <img src="{{ "/img/publication.svg" | relative_url }}" alt="" width="16">
+	      </a>
+	      {% else %}
+	      <a href="{{ nav_url | relative_url }}" title="{{ page.title }}">{{ page.title }}</a>
+	      {% endif %}
 	    {% endif %}
 	  {% endfor %}
     
