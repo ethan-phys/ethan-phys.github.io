@@ -78,6 +78,7 @@ def parse_args() -> argparse.Namespace:
 def normalize_arxiv_id(value: str) -> str:
     cleaned = value.strip()
     cleaned = re.sub(r"^arxiv:\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = cleaned.strip("'\"")
     cleaned = re.sub(r"v\d+$", "", cleaned)
     return cleaned
 
@@ -326,7 +327,7 @@ def render_publication_file(record: PublicationRecord) -> str:
         ---
         title: {yaml_escape(record.title)}
         authors: {yaml_escape(record.authors)}
-        arXiv: {record.arxiv_id}
+        arXiv: {yaml_escape(record.arxiv_id)}
         date: {record.record_date}
         ---
         {abstract}

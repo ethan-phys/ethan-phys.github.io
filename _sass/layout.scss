@@ -44,9 +44,12 @@
     display:none;
   }   
   a {
-    padding-left: 10px;
-    color: $text-color;
-    font-weight: 300
+    padding-left: 14px;
+    color: $text-light-color;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 }
 
@@ -133,10 +136,10 @@
 }
 
 #header {
-  border-bottom:  1px solid rgba(0,0,0,0.14);
+  border-bottom: 1px solid $line-color;
   text-align: center;
-  margin-bottom: 2em;
-  height: 5em;
+  margin-bottom: 3.25em;
+  min-height: 5.25em;
   position: relative;
   a {
   	text-decoration: none;
@@ -146,12 +149,17 @@
     margin: 0 auto;
   }
   h1 {
-    font-size: 2em;
+    font-family: "IBM Plex Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.2;
     padding-bottom: 0;
     padding-top: 0;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
     span {
       color: $text-light-color;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 }
@@ -166,6 +174,8 @@
 
 #post-page {
   margin-bottom: 1.5em;
+  max-width: 44rem;
+  padding: 0 0 2rem;
   @media (min-width: 940px) {
       margin-bottom: 1.3334em;
     }
@@ -182,16 +192,19 @@
 
 .by-line {
   display: block;
-  color: lighten($text-color, 25%);
+  color: $text-light-color;
   line-height: 1.8em; 
   margin-bottom: 1.5em; /* 24px/16px */
-  font-weight: 200;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
   @media (min-width: 940px) {
     display: block;
-    color: lighten($text-color, 25%);
+    color: $text-light-color;
     line-height: 1.8em;
     margin-bottom: 1.3334em; /* 24px/18px */
-    font-weight: 200;
+    font-weight: 400;
   }
 }
 
@@ -242,10 +255,10 @@ img {
   display: block;
   margin: 0 auto;
   margin-bottom: 24px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-          border-radius: 4px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+          border-radius: 2px;
 }
 
 img[title="Monochrome"] {
@@ -279,30 +292,35 @@ code {
   text-align: center;
   margin: 2.666668em;
   span {
-    background-color: darken($background-color, 5%);
+    background-color: rgba(22, 32, 43, 0.08);
     color: $text-color;
   }
   a:hover {
-    background-color: lighten($text-color, 5%);
+    background-color: $accent-color;
   }
 }
 .page-item {
-  background-color: lighten($text-color, 10%);
-  color: $background-color;
+  background-color: $text-color;
+  color: #fff;
   padding: 4px 8px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.5em 1em;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-          border-radius: 4px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  -webkit-border-radius: 999px;
+     -moz-border-radius: 999px;
+      -ms-border-radius: 999px;
+          border-radius: 999px;
 }
 
 /* Footer */
 
 footer {
-  background-color: $background-color;
-  color: $text-color;
+  background-color: transparent;
+  border-top: 1px solid $line-color;
+  color: $text-light-color;
   text-align: center;
-  padding: 0.6667em 0;
+  padding: 1.2em 0 0.6667em;
+  font-size: 0.9rem;
 }

@@ -7,3 +7,5 @@ vendor/
 scripts/__pycache__/
 *.pyc
 .DS_Store
+_posts/.obsidian
+_posts/Templates

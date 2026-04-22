@@ -22,10 +22,17 @@ body {
 
 /*- Base color -*/
 
-$background-color: #FFFFFF;
-$text-color: #333333;
-$text-light-color: rgba(0,0,0,0.6);
-$text-dark-color: #000000;
+$background-color: #f3f3ee;
+$text-color: #16202b;
+$text-light-color: rgba(22, 32, 43, 0.68);
+$text-dark-color: #0d151d;
+$accent-color: #264766;
+$accent-soft-color: rgba(38, 71, 102, 0.08);
+$surface-color: rgba(255, 255, 255, 0.78);
+$surface-strong-color: rgba(255, 255, 255, 0.94);
+$line-color: rgba(22, 32, 43, 0.12);
+$line-strong-color: rgba(22, 32, 43, 0.2);
+$shadow-color: rgba(18, 29, 40, 0.05);
 
 /*- Base settings -*/
 
@@ -35,25 +42,36 @@ html {
 	@media (min-width: 940px) {
 		font-size: 18px;
 	}
-	line-height: 1.8;
+	line-height: 1.75;
 	color: $text-color;
+  scroll-behavior: smooth;
 }
 
 body {
- max-width: 1000px;
- margin: 0 auto;
- padding: 0 10px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 18px 48px;
+  position: relative;
+  background-color: $background-color;
+
+  @media (min-width: 940px) {
+    padding: 0 28px 72px;
+  }
+}
+
+::selection {
+  background: rgba(38, 71, 102, 0.14);
 }
 
 
 /*- Link -*/
 a {
-	color: $text-color;
+	color: $accent-color;
 	text-decoration: none;
 	font-weight: 500;
 	&:hover,
 	&:focus {
-		color: darken($text-color, 5%);
+		color: darken($accent-color, 8%);
 	}
 }
 

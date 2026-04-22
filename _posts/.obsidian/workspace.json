@@ -11,10 +11,14 @@
             "id": "5724dbdaa6615dde",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2026-03-30-Anthropic_principle.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-03-30-Anthropic_principle"
             }
           }
         ]
@@ -181,9 +185,9 @@
   },
   "active": "5724dbdaa6615dde",
   "lastOpenFiles": [
+    "2024-08-05-hello-world.md",
     "2026-03-30-Anthropic_principle.md",
     "Untitled.md",
-    "2024-08-05-hello-world.md",
     "Templates/YYYY-MM-DD-post_title.md",
     "Templates",
     "2026-03-30.md",

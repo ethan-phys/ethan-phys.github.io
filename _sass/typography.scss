@@ -5,37 +5,45 @@
 
 body
 {
-  font-family : "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family : "IBM Plex Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size   : 16px;
-  color: #333;
+  color: $text-color;
+  letter-spacing: -0.01em;
 }
 
 /*- Typography for medium and small screen, based on 16px font-size -*/
 
 p, ul, ol {
 	font-size: 1em; /* 16px */
-	line-height: 1.8em;
+	line-height: 1.75em;
 	margin-bottom: 1.2em; /* 24px/16px */
 }
 
 h1 {
-	font-size: 2.25em; /* 36px/16px */
-	line-height: 1.8em;
-	padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	font-family: "Source Serif 4", "Georgia", serif;
+	font-size: 2.6em; /* 36px/16px */
+	line-height: 1.05em;
+	letter-spacing: -0.04em;
+	padding: 0.15em 0 0.1em;
 }
 
 h2 {
-	font-size: 1.5em; /* 24px/16px */
-	line-height: 1.8em;
-	padding: 1em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */
+	font-family: "Source Serif 4", "Georgia", serif;
+	font-size: 1.85em; /* 24px/16px */
+	line-height: 1.15em;
+	letter-spacing: -0.035em;
+	padding: 0.55em 0 0.1em;
 }
 
 h3, h4, h5, h6 {
-	font-size: 1.125em; /* 18px/16px */
-	line-height: 1em;
-	padding: 0.5em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	font-family: "IBM Plex Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 1.08em; /* 18px/16px */
+	line-height: 1.25em;
+	letter-spacing: -0.02em;
+	padding: 0.35em 0;
+	font-weight: 600;
 }
 
 blockquote {
@@ -58,26 +66,26 @@ blockquote {
 
 p, ul, ol {
 	font-size: 1em; /* 18px */
-	line-height: 1.8em;
+	line-height: 1.75em;
 	margin-bottom: 1.2em; /* 24px/18px */
 }
 
 h1 {
-	font-size: 2.6667em; /* 48px/18px */
-	line-height: 1.8em;
-	padding: 0.1em 0; /* 12px/48px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	font-size: 4.1em; /* 48px/18px */
+	line-height: 0.98em;
+	padding: 0.04em 0 0.08em;
 }
 
 h2 {
-	font-size: 2em; /* 36px/18px */
-	line-height: 1.8em;
-	padding: 0.1em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */
+	font-size: 2.5em; /* 36px/18px */
+	line-height: 1.05em;
+	padding: 0.2em 0 0.08em;
 }
 
 h3, h4, h5, h6 {
-	font-size: 1.3334em; /* 24px/18px */
-	line-height: 1em;
-	padding: 0.5em 0; /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
+	font-size: 1.15em; /* 24px/18px */
+	line-height: 1.3em;
+	padding: 0.3em 0;
 }
 
 blockquote {
